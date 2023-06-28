@@ -1,0 +1,19 @@
+.songs__title {
+  margin: 45px 0 20px;
+}
+
+.songs__container {
+  .song {
+    width: 100%;
+  }
+  .song__info {
+    flex: 1;
+  }
+
+  .song__icons {
+    align-items: end;
+    gap: 15%;
+    justify-content: center;
+    flex-direction: row;
+  }
+}

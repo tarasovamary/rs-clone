@@ -1,0 +1,16 @@
+@import '../logout/logout.scss';
+@import './search/search.scss';
+@import './menu/menu.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search__container {
+  flex: 1;
+  @include media-tablet {
+    display: none;
+  }
+}

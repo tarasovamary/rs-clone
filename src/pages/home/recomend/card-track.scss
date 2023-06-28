@@ -1,0 +1,78 @@
+.track__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 440px;
+  width: 300px;
+}
+
+.recomend__container {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  @include media-tablet {
+    max-width: $tablet-width;
+    margin: 0 auto;
+  }
+}
+
+.hover-button {
+  position: relative;
+  width: 100%;
+  &:hover {
+    .play-button {
+      opacity: 1;
+    }
+  }
+}
+
+.play-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right:43%;
+  top: 43%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .5s ease;
+  background-color: rgb(255 255 255 / 80%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track__tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.track__tag {
+  background-color: rgb(83 198 255);
+  border-radius: 15px;
+  padding: 0 18px 4px;
+  color: white;
+}
+
+.track__image {
+  width: 296px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.track__title {
+  margin: 11px 0;
+  color: #646464;
+}
+
+.artist__title {
+  margin-top: 5px;
+  @include font($size:2.1rem, $height:2.7rem);
+}

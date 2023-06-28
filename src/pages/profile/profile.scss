@@ -1,0 +1,104 @@
+.profile-wrapper {
+  padding: 50px 0px;
+}
+.userBlock__wrapper {
+  width: 600px;
+}
+
+.userBlock__user-title {
+  text-align: center;
+  font-size: 28px;
+}
+
+#profile-img {
+  max-width: 100px;
+  flex: 1 0 100%;
+  margin-right: 44px;
+}
+
+#profile-flex {
+  display: flex;
+  margin-bottom: 49px;
+}
+.userBlock {
+  flex: 1 0 100%;
+
+  &__user-title h2 {
+    text-align: left;
+    
+  }
+
+  &__user-name{
+    margin-bottom: 10px;
+  }
+
+  &__user-email h2 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    margin-bottom: 6px;
+  }
+
+  &__user-tel h2 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    color: rgba(109, 109, 109, 1);
+  }
+
+  &__h2 {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 36px;
+    margin-bottom: 21px;
+  }
+  &__title-wrap {
+    width: 600px;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+#settings-form{
+  display: none;
+}
+
+#settings-form input {
+  margin-bottom: 27px;
+  width: 400px;
+}
+
+#settings-form span {
+  margin-bottom: 7px;
+}
+
+#settings-form-btn {
+  background: rgba(135, 207, 101, 1);
+  max-width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 17.5px;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px 0px rgba(75, 199, 226, 0.25);
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+#spoiler-settings-wrap{
+  position: relative;
+}
+
+#spoiler-settings{
+  position: absolute;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgba(135, 207, 101, 1);
+  top: 0px;
+  left: 118px;
+}

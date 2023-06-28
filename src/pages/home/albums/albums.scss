@@ -1,0 +1,33 @@
+.albums__title {
+  margin: 45px 0 20px;
+}
+
+.album__title {
+  max-width: 250px;
+  margin-top: 5px;
+}
+
+.albums__container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.album__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 5px;
+}
+
+.album__image{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+    @extend %transition;
+    border-radius: 20px;
+   }
+}

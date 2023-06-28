@@ -1,0 +1,74 @@
+.album {
+  position: relative;
+}
+
+.album-track_cover {
+  filter: blur(10px);
+  position: absolute;
+  // top: 0;
+  width: calc(100% - 300px);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include media-tablet {
+    width: 90%;
+    }
+  }
+
+.album-track_image {
+  img {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    margin-right: -50%;
+    // top: 170px;
+    @include media-tablet {
+      top:12%;
+      left: 20%;
+      }
+  }
+}
+.album-track_title {
+    position: absolute;
+    color: rgb(255, 255, 255, 0.9);
+    right: 50px;
+}
+
+.albums-tracks__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 425px;
+  .song {
+    width: 90%;
+  }
+  .song__info {
+    flex: 1;
+  }
+
+  .song__icons {
+    align-items: end;
+    gap: 15%;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 548px){
+  .keen-slider__slide{
+    height: 300px ;
+    img{
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .keen-slider__slide{
+    height: 300px ;
+    img{
+      object-fit: cover;
+    }
+  }
+}

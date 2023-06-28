@@ -1,0 +1,136 @@
+.playlist__container {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.playlist__card {
+  margin: 10px;
+  box-shadow: 0px 4px 4px rgb(102 173 195 / 25%);
+  border-radius: 15px;
+  color: $color-text;
+}
+
+.playlist__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+}
+
+.playlist__name {
+  margin: 2px 12px;
+}
+
+.playlist__count {
+  margin: 2px 12px;
+}
+
+.playlist__tracks_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.block__playlist {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  @media (max-width: 800px) {
+   flex-direction: column;
+  }
+}
+
+.block__playlist_img {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+.block__playlist_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: 10px; 
+  border-radius: 15px;
+  p {
+    @include font($size: 2.4rem, $height: 2.7rem, $weight: 400);
+    color: $color-text;
+  }
+}
+
+.title__playlist {
+  margin: 10px;
+  color: rgb(132, 132, 132);
+}
+
+.play__playlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 40px;
+  margin: 6px;
+  background: rgb(123, 197, 45);
+  border-radius: 25px;
+  border: 1px solid $color-background;
+  color: $color-background;
+  cursor: pointer;
+  img {
+    margin: 5px;
+  }
+  span {
+    margin-right: 5px;
+  }
+  @media (max-width: 800px) {
+    width: 70px;
+  margin: 3px;
+   }
+}
+
+.download__playlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin: 6px;
+  background: rgb(221, 218, 218);
+  border: 1px solid $color-background;
+  border-radius: 25px;
+  cursor: pointer;
+  a{
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+    color: $color-text;
+  }
+  @media (max-width: 800px) {
+  margin: 3px;
+   }
+}
+
+.manager__playlist {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.like__playlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgb(221, 218, 218);
+  border: 1px solid $color-background;
+  border-radius: 25px;
+  img {
+    margin-bottom: 0;
+  }
+}

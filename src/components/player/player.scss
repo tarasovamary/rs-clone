@@ -1,0 +1,243 @@
+.player {
+  background-color: #fff;
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  right: calc((100% - 1440px) / 2);
+  height: 100%;
+  width: 1192px;
+  padding: 0px 80px 11px 21px;
+  box-shadow: 0px -4px 19px 0px rgba(102, 173, 195, 0.25);
+  moz-user-select: none !important;
+    -khtml-user-select: none !important;
+    user-select: none !important;
+
+  @include content-desktop {
+    width: calc(100% - 248px);
+    right: 0;
+  }
+
+  @include media-tablet {
+    width: 100%;
+    padding: 0px 10px 10px 10px;
+  }
+
+  &__panel-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__container {
+    z-index: 50;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__wrapper {
+    position: fixed;
+    height: 73px;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+  }
+  &__like {
+    width: 27.5px;
+    height: 25.23px;
+    cursor: pointer;
+    img {
+      max-width:  27.5px;
+      display: block;
+    }
+  }
+  &__panel {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+  }
+  &__sound {
+    width: 27.5px;
+    height: 25.23px;
+    cursor: pointer;
+    // margin-left: 130px;
+    img {
+      max-width:  27.5px;
+    }
+  }
+  &__volume {
+    visibility: hidden;
+    position: absolute;
+    width: 100px;
+    height: 28px;
+    right: 45px;
+    top: -45px;
+    transform: rotate(270deg);
+    transition: all ease 0.5s;
+    z-index: 12;
+
+    input {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 5px;
+      background: #000;
+      outline: none;
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 8px;
+    }
+
+    /* for chrome/safari */
+    input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      background: #000;
+      cursor: pointer;
+      border: 8px solid rgb(0, 0, 0);
+      border-radius: 50%;
+    }
+
+    /* for firefox */
+    input::-moz-range-thumb {
+      width: 10px;
+      height: 10px;
+      background: #000;
+      cursor: pointer;
+      border: 8px solid rgb(0, 0, 0);
+      border-radius: 50%;
+    }
+  }
+}
+
+.player.hidden {
+  display: none;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  margin-right: 23px;
+  &__song-name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  &__author {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgba(98, 98, 98, 1);
+  }
+  &__image {
+    position: relative;
+    width: 50px;
+    padding-bottom: 50px;
+    margin-right: 8px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+  &__about-wrapp {
+    min-width: max-content;
+  }
+}
+
+.progress {
+  position: relative;
+  top: -11px;
+  left: -21px;
+  width: 100%;
+  height: 13px;
+  width: 1192px;
+  z-index: 10;
+  cursor: pointer;
+  @include content-desktop {
+    width: calc(100vw - 248px);
+    right: 0;
+  }
+
+  &__bar {
+    position: absolute;
+    width: 6px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: rgba(62, 62, 62, 1);
+    transition: all 0.3s ease;
+    z-index: 10;
+    &:hover {
+      height: 4px;
+      background-color: black;
+      transition: all 0.3s ease;
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: -2px;
+      right: -1px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(62, 62, 62, 1);
+      transition: all 0.3s ease;
+    }
+    &:hover::after {
+      height: 9px;
+      width: 9px;
+      background-color: black;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+  }
+}
+
+.panel {
+  &__previous {
+  }
+  &__play {
+  }
+  &__next {
+  }
+  &__btn {
+    width: 22px;
+    height: 25px;
+    margin: 0px 27px;
+    cursor: pointer;
+    moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    // @include media-tablet {
+    //   margin: 0 8px;
+    // }
+  }
+}
+
+.current-track{
+  box-shadow: 0px 4px 4px rgb(134, 255, 69);
+}
+
+@media screen and (max-width: 752px) {
+  .player__panel div{
+    margin: 0px 10px !important;
+  }
+  .player__panel{
+    
+  }
+}
+
+@media screen and (max-width: 388px){
+  .info-block__about-wrapp{
+    display: none;
+  }
+}

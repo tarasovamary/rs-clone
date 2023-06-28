@@ -1,0 +1,111 @@
+:root {
+  --bg: #222;
+  --text: #fff;
+  --light: #cc9dff;
+}
+
+.switch__wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 100px;
+  padding:0px 0px 20px 0px;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  span {
+    font-size: 24px;
+    padding: 4px 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+}
+
+.box-switch {
+  margin-right: 10px;
+  z-index: 100;
+  --bg: #fff;
+  --text: #000;
+  color: var(--text);
+  width: 60px;
+  height: 30px;
+  background: var(--light);
+  border-radius: 30px;
+  position: relative;
+  top: 0;
+  left: 0;
+  .switch {
+    z-index: 100;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    background: var(--bg);
+    border-radius: 40px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 0.5s all ease;
+  }
+}
+.light {
+  z-index: 100;
+  --text: #222;
+  .box-switch {
+    z-index: 100;
+    background:  #474545 !important;
+    .switch {
+      z-index: 100;
+      transform: translateX(30px);
+    }
+  }
+}
+
+.dark {
+ // //transition: all 0.3s ease;
+  background-color: #181818 !important;
+  color: #fff !important;
+  a {
+    //transition: all 0.3s ease;
+    color: #fff !important;
+  }
+  div {
+    //transition: all 0.3s ease;
+    background-color: #181818 !important;
+    color: #fff !important;
+  }
+  .play-button {
+    background-color: rgb(255 255 255 / 80%) !important;
+  }
+}
+
+.dark-player {
+  //transition: all 0.3s ease;
+  background-color: #474545 !important;
+  color: #fff !important;
+  .progress__bar {
+    background:  #fff;
+    &::after {
+      background:  #fff;
+    }
+  }
+  .panel__btn {
+    img {
+      filter: invert(100%);
+    }
+  }
+  .player__sound {
+    img {
+      filter: invert(100%);
+    }
+  }
+  .player__volume input {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .player__volume {
+    input::-webkit-slider-thumb {
+      background: rgb(255, 255, 255);
+      border: 8px solid rgb(255, 255, 255);
+    }
+  }
+}

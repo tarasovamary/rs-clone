@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
+@import "./components/preloader/preloader.scss";
+@import "./style/mixins.scss";
+@import "./style/constants.scss";
+@import "./assets/resource/reset.scss";
+@import "./components/header/header.scss";
+@import "./components/aside/aside.scss";
+@import "./pages/logIn/logIn.scss";
+@import "./pages/registration/registration.scss";
+@import "./pages/profile/profile.scss";
+@import "./pages/home/home.scss";
+@import "./pages/categories/categories.scss";
+@import "./components/tag/tag.scss";
+@import "./components/player/player.scss";
+@import "./style/placeholders.scss";
+@import "keen-slider/keen-slider.scss";
+@import "./components/theme/theme.scss";
+@import "./pages/search/search-content.scss";
+@import "./pages/playlist/playlist.scss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import './components/preloader/preloader.scss';
+@import './style/mixins.scss';
+@import './style/constants.scss';
+@import './assets/resource/reset.scss';
+@import './components/header/header.scss';
+@import './components/aside/aside.scss';
+@import './pages/logIn/logIn.scss';
+@import './pages/registration/registration.scss';
+@import './pages/profile/profile.scss';
+@import './pages/home/home.scss';
+@import './pages/categories/categories.scss';
+@import './components/tag/tag.scss';
+@import './components/player/player.scss';
+@import './style/placeholders.scss';
+@import 'keen-slider/keen-slider.scss';
+@import './components/theme/theme.scss';
+@import './pages/search/search-content.scss';
+@import './pages/favorite/favorites.scss';
+@import './pages/albums/albums-page.scss';
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  transition: all 0.3s ease;
+  @extend %font-default;
+  @include font($size: 1.6rem, $height: 2.1rem);
+  background-color: $color-background;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  max-width: $content-width;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  background-color: $color-background;
+  flex: 1 1 auto;
+  padding: 30px;
+  margin-bottom: 70px;
+  max-width: calc(100% - 248px);
+  @include media-tablet {
+    max-width: calc(100%);
+  }
+}
